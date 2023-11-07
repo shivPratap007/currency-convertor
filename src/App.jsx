@@ -43,7 +43,7 @@ function App() {
         console.log(Price);
         setToval(Price);
       });
-  }, [to, from, fromval, toval,label]);
+  }, [to, from, fromval, toval, label]);
 
   const swap = () => {
     setLabel(!label);
@@ -56,7 +56,9 @@ function App() {
 
   return (
     <>
-      <h1 className="text-center">Hello Baccho</h1>
+      <h1 className="text-center" style={{ fontSize: "40px" }}>
+        Currency Convertor
+      </h1>
       <div className="flex justify-center align-middle">
         <Input
           label={label ? "From" : "To"}
@@ -82,7 +84,6 @@ function App() {
           data={label ? toval : fromval}
         />
       </div>
-      F
     </>
   );
 }
